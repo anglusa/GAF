@@ -1,4 +1,4 @@
-namespace GAF.Api;
+namespace Aplicacao_Financeira.Api;
 
 public class WeatherForecast
 {

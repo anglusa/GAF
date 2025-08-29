@@ -1,16 +1,16 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GAF.Api.Models;
+namespace Aplicacao_Financeira.Api.Models;
 
 [Table("transactions")]
 public class Transaction
-{
+{   
     [Key]
     public int Id { get; set; }
 
     [Required]
-    [StringLength(300)]
+    [StringLength(100)]
     public string Description { get; set; }
 
     [Required]
@@ -36,10 +36,7 @@ public class Transaction
     [ForeignKey("UserId")]
     public virtual User User { get; set; }
 
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
-    public DateTime UpdatedAt { get; set; } = DateTime.Now;
-
-
-
+    public DateTime CreateAt { get; set; } = DateTime.Now;
+    public DateTime UpdateAt { get; set; } = DateTime.Now;
 
 }

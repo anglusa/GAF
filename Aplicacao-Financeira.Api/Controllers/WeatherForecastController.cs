@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace GAF.Api.Controllers;
+namespace Aplicacao_Financeira.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
