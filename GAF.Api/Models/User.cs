@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
-namespace Aplicacao_Financeira.Api.Models;
+namespace GAF.Api.Models;
 
 [Table("users")]
 public class User : IdentityUser

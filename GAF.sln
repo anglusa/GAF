@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplicacao-Financeira.Api", "Aplicacao-Financeira.Api\Aplicacao-Financeira.Api.csproj", "{4D8E6CBD-5E61-D6C6-C856-DD20E3F11CF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAF.Api", "GAF.Api\GAF.Api.csproj", "{7850FF37-5124-4BF9-A22B-F539C5B95C20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D8E6CBD-5E61-D6C6-C856-DD20E3F11CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D8E6CBD-5E61-D6C6-C856-DD20E3F11CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D8E6CBD-5E61-D6C6-C856-DD20E3F11CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D8E6CBD-5E61-D6C6-C856-DD20E3F11CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7850FF37-5124-4BF9-A22B-F539C5B95C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7850FF37-5124-4BF9-A22B-F539C5B95C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7850FF37-5124-4BF9-A22B-F539C5B95C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7850FF37-5124-4BF9-A22B-F539C5B95C20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0494A6AC-B31A-43B0-A263-7A56B9474D24}
+		SolutionGuid = {8A7BD4AF-2BB0-4CA1-8E54-4D69BF47A853}
 	EndGlobalSection
 EndGlobal

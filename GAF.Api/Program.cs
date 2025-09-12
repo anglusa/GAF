@@ -1,9 +1,11 @@
-using Aplicacao_Financeira.Api.Data;
-using Aplicacao_Financeira.Api.Models;
+using System.Text;
+using GAF.Api.Data;
+using GAF.Api.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,10 +43,10 @@ var secretKey = jwtSettings["SecretKey"];
 
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AddAuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AddAuthenticationScheme;
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-});
+})
 .AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
@@ -59,14 +61,17 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-//Serviço de Autorização
+// Serviço de Autorização
 builder.Services.AddAuthorization();
 
-// Serviço de Autenticação Personalizada
+// Serviço de Autenticação Personalizado
+
 
 // Serviço de Repositórios
 
+
 // Serviço de Serviços
+
 
 // Configuração do CORS
 builder.Services.AddCors(options =>
@@ -78,8 +83,6 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
-
-
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddEndpointsApiExplorer();
@@ -120,12 +123,11 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Aplicação Financeira API V1");
-        c.RoutePrefix = string.Empty;
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "GAF API V1");
+        c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
     });
 }
 

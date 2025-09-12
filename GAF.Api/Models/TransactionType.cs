@@ -1,4 +1,4 @@
-namespace Aplicacao_Financeira.Api.Models;
+namespace GAF.Api.Models;
 
 public enum TransactionType
 {
